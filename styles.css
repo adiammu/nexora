@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ede8f5;
+  color: #3d52a0;
+  animation: fadeIn 1s ease-in;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #3d52a0;
+  animation: slideDown 1s ease-out;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #7091e6;
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 0.5s ease-in;
+}
+
+.input-section label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.input-section input[type="number"], .input-section input[type="date"], .input-section input[type="text"], .input-section select {
+  padding: 8px;
+  margin-right: 10px;
+  border: 2px solid #adbbda;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.input-section input:hover, .input-section select:hover {
+  box-shadow: 0 0 5px #7091e6;
+}
+
+.input-section button {
+  padding: 8px 15px;
+  background-color: #3d52a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.input-section button:hover {
+  background-color: #7091e6;
+  transform: scale(1.1);
+}
+
+.expenses-list {
+  margin: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.expenses-list table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expenses-list th, .expenses-list td {
+  border: 1px solid #adbbda;
+  padding: 10px;
+  text-align: left;
+}
+
+.expenses-list th {
+  background-color: #3d52a0;
+  color: white;
+}
+
+.expenses-list tfoot td {
+  font-weight: bold;
+  background-color: #7091e6;
+  color: white;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.1);
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 400px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+#expense-chart {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
